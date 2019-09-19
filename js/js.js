@@ -64,7 +64,8 @@ $('#error_comment').addClass('hidden')
 $('#btn-publicar').on('click', function(event) {
   let newHtml = ''
 
-  //let stars = $(input[name='rating']:checked)
+  let stars = $("input[name='rating']:checked").val()
+  console.log(stars)
 
   if ($('#nombre').val() === '' || $('#comentario').text() === '') {
     $('#error_comment').removeClass('hidden')
@@ -76,7 +77,7 @@ $('#btn-publicar').on('click', function(event) {
         ${$('#nombre').val()}
       </h1>
       <div>
-      ${getStarsSpans($(this).find('stars').text())}
+      ${getStarsSpans(stars)}
       </div>
       <p> ${$('#comentario').text()} </p>
     </div>
@@ -86,50 +87,6 @@ $('#btn-publicar').on('click', function(event) {
     $('#comentario').text('')
 
   }
-
-
-
-  //
-  // // Crear variables
-  // var div = document.createElement("div")
-  // div.setAttribute('class', "review")
-  //
-  //
-  // var h1 = document.createElement("h1")
-  // h1.setAttribute('class', "nombre")
-  //
-  // var p = document.createElement("p")
-  //
-  // let nombreInput = document.getElementById('nombre')
-  // let comentarioInput = document.getElementById('comentario')
-  // let emailInput = document.getElementById('email')
-  // var nombre = document.createTextNode(nombreInput.value)
-  // var comentario = document.createTextNode(comentarioInput.value)
-  // var email = document.createTextNode(emailInput.value)
-  //
-  // // var input = document.createElement("input")
-  // // input.name = "todo"
-  // // input.type = "checkbox"
-  // // input.value = elemento.length + 1
-  //
-  // // var listElement = document.createElement("li")
-  // //
-  // // var text = document.createTextNode(newitem.value)
-  //
-  // if(nombre.value === "" || comentario.value === ""){
-  //     error.classList.removeClass('hidden')
-  // } else {
-  //     h1.appendChild(nombre)
-  //     p.appendChild(comentario)
-  //
-  //     div.appendChild(nombre)
-  //     div.appendChild(comentario)
-  //     //todoList.appendChild(listElement)
-  //     nombreInput.value = ""
-  //     comentarioInput.value = ""
-  //     emailInput.value = ""
-  // }
-
 
 
 
