@@ -25,11 +25,7 @@ $.ajax({
 
     $(data).find('comment').each(function() {
 
-      //input[name='rating']:checked
-
       let $stars = $(this).find('stars').text()
-
-      //$(input[name='rating']:checked)
 
       newHtml += `
       <div class="review">
@@ -59,8 +55,6 @@ $.ajax({
 */
 $('#error_comment').addClass('hidden')
 
-//let error = document.getElementById('error_comment')
-
 $('#btn-publicar').on('click', function(event) {
   let newHtml = ''
 
@@ -83,9 +77,10 @@ $('#btn-publicar').on('click', function(event) {
     </div>
     `
     $('#seccion_reviews').append(newHtml)
-    $('#nombre').val('')
     $('#email').val('')
+    $('#nombre').val('')
     
+
     $('#comentario').text('')
 
   }
