@@ -103,6 +103,7 @@ $('#btn-publicar').on('click', function(event) {
 $('#btn-limpiar').on('click', function(event) {
   $('#nombre').val('')
   $('#email').val('')
+  
   $('#comentario').empty()
 
 })
