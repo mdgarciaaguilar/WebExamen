@@ -85,6 +85,7 @@ $('#btn-publicar').on('click', function(event) {
     $('#seccion_reviews').append(newHtml)
     $('#nombre').val('')
     $('#email').val('')
+    
     $('#comentario').text('')
 
   }
